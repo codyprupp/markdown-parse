@@ -5,3 +5,7 @@ test: MarkdownParse.java MarkdownParse.class MarkdownParseTest.java
 
 MarkdownParse.class: MarkdownParse.java
 	javac MarkdownParse.java
+
+CLASSPATH = lib/*:.
+TryCommonMark.class: TryCommonMark.java
+	javac -g -cp $(CLASSPATH) TryCommonMark.java
